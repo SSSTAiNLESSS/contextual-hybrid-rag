@@ -1,1 +1,3 @@
-# api_reference.md
+# API Endpoints
+
+`POST /query` - Submit narrative generation requests

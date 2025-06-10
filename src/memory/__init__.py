@@ -1,1 +1,1 @@
-#!/usr/bin/env python3
+from .character_memory import CharacterMemory

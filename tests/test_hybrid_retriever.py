@@ -1,1 +1,3 @@
-#!/usr/bin/env python3
+def test_hybrid_search():
+    # Verify BM25 + vector fusion
+    pass

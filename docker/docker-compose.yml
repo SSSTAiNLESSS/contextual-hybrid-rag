@@ -1,0 +1,9 @@
+services:
+  rag-api:
+    build: .
+    ports:
+      - "8000:8000"
+  chromadb:
+    image: chromadb/chroma
+    ports:
+      - "8001:8001"

@@ -1,1 +1,3 @@
-# architecture.md
+## System Architecture
+
+[Technical diagram and component descriptions]

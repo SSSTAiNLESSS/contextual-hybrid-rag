@@ -1,1 +1,4 @@
-#!/usr/bin/env python3
+from src.rag_core import ContextualHybridRAG
+
+rag = ContextualHybridRAG()
+print(rag.query("Father receives terminal diagnosis"))

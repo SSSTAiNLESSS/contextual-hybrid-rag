@@ -1,1 +1,3 @@
-# CODE_OF_CONDUCT.md
+# Code of Conduct
+
+Be respectful, inclusive, and collaborative.
