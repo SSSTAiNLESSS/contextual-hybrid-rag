@@ -5,10 +5,6 @@ import subprocess
 # Get absolute path to this script's directory (the project root)
 project_root = os.path.dirname(os.path.abspath(__file__))
 
-# Set PYTHONPATH to include the src directory
-src_path = os.path.join(project_root, "src")
-os.environ["PYTHONPATH"] = src_path + os.pathsep + os.environ.get("PYTHONPATH", "")
-
 # Activate virtual environment if not already active
 venv_python = os.path.join(project_root, ".venv", "Scripts", "python.exe")
 if os.path.exists(venv_python) and sys.executable.lower() != venv_python.lower():
@@ -19,7 +15,7 @@ if os.path.exists(venv_python) and sys.executable.lower() != venv_python.lower()
 # Launch Uvicorn using the correct module path
 try:
     subprocess.run([
-        sys.executable, "-m", "uvicorn", "src.api.app:app", "--reload"
+        sys.executable, "-m", "uvicorn", "api.app:app", "--reload"
     ])
 except Exception as e:
     print("Failed to launch Uvicorn:", e)
