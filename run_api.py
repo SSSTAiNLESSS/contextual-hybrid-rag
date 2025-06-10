@@ -10,7 +10,10 @@ src_path = os.path.join(project_root, "src")
 os.environ["PYTHONPATH"] = src_path + os.pathsep + os.environ.get("PYTHONPATH", "")
 
 # Activate virtual environment if not already active
-venv_python = os.path.join(project_root, ".venv", "Scripts", "python.exe")
+if os.name == "nt" or sys.platform == "win32":
+    venv_python = os.path.join(project_root, ".venv", "Scripts", "python.exe")
+else:
+    venv_python = os.path.join(project_root, ".venv", "bin", "python")
 if os.path.exists(venv_python) and sys.executable.lower() != venv_python.lower():
     # Relaunch this script using the venv's python
     subprocess.run([venv_python, __file__] + sys.argv[1:])
